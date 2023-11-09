@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './header'; // Make sure the import paths match your project structure
 import Footer from './footer';
@@ -6,6 +6,24 @@ import ResultPage from './results';
 
 function Home() {
   const navigate = useNavigate();
+  const [fileSelected, setFileSelected] = useState(false);
+
+  const handleFileChange = (event) => {
+    if (event.target.files.length > 0) {
+      setFileSelected(true);
+    } else {
+      setFileSelected(false);
+    }
+  };
+
+  const handleSubmit = () => {
+    if (fileSelected) {
+      navigate('/results');
+    } else {
+      alert('Please select a file before submitting.');
+      // You can replace the alert with any validation message or UI behavior you prefer.
+    }
+  };
 
   return (
     <div>
@@ -19,17 +37,22 @@ function Home() {
               </div>
               <br></br>
               <div className="mt-4">
-                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" />
+                <input
+                  type="file"
+                  id="imageUpload"
+                  name="imageUpload"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                />
                 <label htmlFor="imageUpload">Upload Image</label>
               </div>
               <br></br>
               <br></br>
               <form>
-                
                 <button
-                  type="submit"
+                  type="button" // Change to type="button" to prevent form submission
                   className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  onClick={() => navigate('/results')}
+                  onClick={handleSubmit}
                 >
                   Submit
                 </button>
