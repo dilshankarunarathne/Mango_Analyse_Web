@@ -32,12 +32,12 @@ function Home() {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (fileSelected) {
-      navigate('/results');
+      uploadFile();
     } else {
       alert('Please select a file before submitting.');
-      // You can replace the alert with any validation message or UI behavior you prefer.
     }
   };
 
