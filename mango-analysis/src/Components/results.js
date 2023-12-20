@@ -6,9 +6,6 @@ function ResultPage() {
   const [results, setResults] = useState(null);
 
   useEffect(() => {
-    // Fetch results from your backend API here
-    // You can use the fetch API, axios, or any other method to make an API request
-    // For example, using the fetch API:
     fetch('your-backend-api-endpoint')
       .then((response) => response.json())
       .then((data) => setResults(data))
