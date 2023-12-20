@@ -10,9 +10,9 @@ function Home() {
 
   const handleFileChange = (event) => {
     if (event.target.files.length > 0) {
-      setFileSelected(true);
+      setFileSelected(event.target.files[0]);
     } else {
-      setFileSelected(false);
+      setFileSelected(null);
     }
   };
 
