@@ -16,7 +16,21 @@ function Home() {
     }
   };
 
-  
+  const uploadFile = async () => {
+    const formData = new FormData();
+    formData.append('file', fileSelected);
+
+    const response = await fetch('http://127.0.0.1:8000/api/classify', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      navigate('/results');
+    } else {
+      alert('File upload failed');
+    }
+  };
 
   const handleSubmit = () => {
     if (fileSelected) {
