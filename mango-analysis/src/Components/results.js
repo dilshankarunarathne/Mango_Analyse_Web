@@ -22,17 +22,10 @@ function ResultPage() {
         <div className="relative min-h-full w-32 ...">
           <div className="absolute inset-0 ... ">
             <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
-              {results ? (
-                <div>
-                  <h3>Result is :</h3>
-                  {/* Render your results here */}
-                  {results.map((result, index) => (
-                    <div key={index}>{result}</div>
-                  ))}
-                </div>
-              ) : (
-                <div>Loading results...</div>
-              )}
+              <div>
+                <h3>Result is :</h3>
+                <div>{prediction}</div>
+              </div>
             </div>
           </div>
         </div>
