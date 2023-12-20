@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from './header'; // Make sure the import paths match your project structure
+import Header from './header'; 
 import Footer from './footer';
 import ResultPage from './results';
 
