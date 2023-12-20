@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Footer from './footer.js';
 import Header from './header.js';
 
 function ResultPage() {
   const [results, setResults] = useState(null);
+  const location = useLocation();
+  const prediction = location.state?.prediction || 'No prediction';
 
   useEffect(() => {
     fetch('your-backend-api-endpoint')
