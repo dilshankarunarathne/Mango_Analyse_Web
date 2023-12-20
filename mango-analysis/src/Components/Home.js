@@ -16,6 +16,8 @@ function Home() {
     }
   };
 
+  
+
   const handleSubmit = () => {
     if (fileSelected) {
       navigate('/results');
