@@ -55,7 +55,7 @@ function Home() {
   return (
     <div>
       <Header />
-            <div className='flex h-screen'>
+            <div className='flex h-screen ml-4 mr-4'>
               <div className='image-select w-1/2'>
                 <div className="text-xl font-bold items-center justify-center mt-16 p-4">
                   <div>
