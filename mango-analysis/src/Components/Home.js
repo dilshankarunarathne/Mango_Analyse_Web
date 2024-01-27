@@ -88,7 +88,7 @@ function Home() {
                 </div>
               </div>
 
-              <div className='result-box w-1/2'>
+              <div className='result-box w-1/2 border border-gray-400 bg-gray-200 p-4'>
                 <div className='text-xl font-bold items-center justify-center p-4'>
                   {prediction ? (
                     <div>
