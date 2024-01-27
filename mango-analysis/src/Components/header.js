@@ -10,9 +10,9 @@ function Header() {
         <div className='flex-grow  text-center '>
           <h2 className='font-bold  text-2xl px-5 py-3'></h2>
         </div>
-        <div className='flex-grow  text-center '>
+        {/* <div className='flex-grow  text-center '>
           <h2 className='font-bold  text-2xl px-5 py-3'>About Us</h2>
-        </div>
+        </div> */}
       </div>
     </div>
   );
