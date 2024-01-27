@@ -90,6 +90,7 @@ function Home() {
                 </form>
               </div>
             </div>
+            
             <div className='result-box'>
 
             </div>
