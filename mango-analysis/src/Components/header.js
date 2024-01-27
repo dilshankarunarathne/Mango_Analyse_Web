@@ -7,7 +7,7 @@ function Header() {
         <div>
           <h2 className='font-bold py-2 text-left px-5 text-4xl '>Identification of consumable mango</h2>
         </div>
-        <div className='flex-grow  text-center '>
+        <div className='flex-grow  text-center align-middle'>
           <h2 className='font-bold  text-2xl px-5 py-3'></h2>
         </div>
         {/* <div className='flex-grow  text-center '>
