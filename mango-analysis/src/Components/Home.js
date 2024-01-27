@@ -92,7 +92,7 @@ function Home() {
                 </div>
               </div>
 
-              <div className='result-box flex-1'>
+              <div className='result-box flex-1 text-xl font-bold items-center justify-center mt-16 p-4'>
                 {prediction && (
                   <div>
                     <h3>This mango is </h3>
