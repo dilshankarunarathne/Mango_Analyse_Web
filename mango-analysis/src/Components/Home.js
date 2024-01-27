@@ -55,8 +55,8 @@ function Home() {
   return (
     <div>
       <Header />
-            <div className='flex'>
-              <div className='image-select flex-1'>
+            <div className='flex h-screen'>
+              <div className='image-select w-1/2'>
                 <div className="text-xl font-bold items-center justify-center mt-16 p-4">
                   <div>
                     <h3>Select the mango image to check if it's consumable:</h3>
@@ -89,13 +89,15 @@ function Home() {
                 </div>
               </div>
 
-              <div className='result-box flex-1 text-xl font-bold items-center justify-center mt-16 p-4'>
-                {prediction && (
-                  <div>
-                    <h3>This mango is </h3>
-                    <div>{prediction}</div>
-                  </div>
-                )}
+              <div className='result-box w-1/2'>
+                <div className='text-xl font-bold items-center justify-center mt-16 p-4'>
+                  {prediction && (
+                    <div>
+                      <h3>This mango is </h3>
+                      <div>{prediction}</div>
+                    </div>
+                  )}
+                </div>
               </div>
       </div>
       {/* <Footer /> */}
