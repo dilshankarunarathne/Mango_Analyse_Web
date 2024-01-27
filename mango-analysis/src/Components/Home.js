@@ -61,7 +61,7 @@ function Home() {
                   <div>
                     <h3>Select the mango image to check if it's consumable...</h3>
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-4 text-xl font-bold">
                     <input
                       type="file"
                       id="imageUpload"
