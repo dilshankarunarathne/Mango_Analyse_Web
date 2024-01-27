@@ -6,14 +6,24 @@ import ResultPage from './results';
 
 function Home() {
   const navigate = useNavigate();
-  const [fileSelected, setFileSelected] = useState(false);
+  const [fileSelected, setFileSelected] = useState(null);
+  const [previewSource, setPreviewSource] = useState();
 
   const handleFileChange = (event) => {
     if (event.target.files.length > 0) {
       setFileSelected(event.target.files[0]);
+      previewFile(event.target.files[0]);
     } else {
       setFileSelected(null);
     }
+  };
+
+  const previewFile = (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setPreviewSource(reader.result);
+    };
   };
 
   const uploadFile = async () => {
