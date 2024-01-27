@@ -56,14 +56,14 @@ function Home() {
     <div>
       <Header />
       <div style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + '/bg.jpeg'})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + '/bg.jpg'})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}>
             <div className='flex h-screen ml-4 mr-4 mt-6' style={{ alignItems: 'baseline' }}>
               <div className='image-select w-1/2'>
-                <div className='image-select w-1/2 border border-gray-400 bg-gray-200 p-4 text-l font-bold'>
+                <div className='image-select w-1/2 border border-gray-400 bg-green-200 p-4 text-l font-bold'>
                   <div>
                     <h3>Select the mango image to check if it's consumable...</h3>
                   </div>
@@ -94,11 +94,11 @@ function Home() {
                 </div>
               </div>
 
-              <div className='result-box w-1/2 border border-gray-400 bg-gray-200 p-4'>
+              <div className='result-box w-1/2 border border-gray-400 bg-green-200 p-4'>
                 <div className='text-xl font-bold items-center justify-center p-4'>
                   {prediction ? (
                     <div>
-                      <h3 className={prediction === 'not consumable' ? 'text-red-500' : 'text-green-500'}>
+                      <h3 className={prediction === 'not consumable' ? 'text-red-500' : 'text-green-600'}>
                         This mango is {prediction}
                       </h3>
                     </div>
