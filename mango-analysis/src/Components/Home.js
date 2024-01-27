@@ -50,7 +50,7 @@ function Home() {
           <div className="absolute inset-0 ... ">
             <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
               <div>
-                <h3>Add Your Image To Find consumable mangoes</h3>
+                <h3>Select the mango image to check if it's consumable:</h3>
               </div>
               <br></br>
               <div className="mt-4">
