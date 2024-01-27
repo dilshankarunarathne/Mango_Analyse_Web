@@ -95,7 +95,7 @@ function Home() {
               <div className='result-box flex-1'>
                 {prediction && (
                   <div>
-                    <h3>Result is :</h3>
+                    <h3>This mango is </h3>
                     <div>{prediction}</div>
                   </div>
                 )}
