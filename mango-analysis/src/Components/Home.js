@@ -55,7 +55,7 @@ function Home() {
   return (
     <div>
       <Header />
-            <div className='flex h-screen ml-4 mr-4 mt-6'>
+            <div className='flex h-screen ml-4 mr-4 mt-6' style={{ alignItems: 'baseline' }}>
               <div className='image-select w-1/2'>
                 <div className='image-select w-1/2 border border-gray-400 bg-gray-200 p-4 text-l font-bold'>
                   <div>
