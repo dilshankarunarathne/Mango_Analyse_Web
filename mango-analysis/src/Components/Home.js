@@ -99,7 +99,7 @@ function Home() {
                   ) : (
                     <div>
                       <h3>
-                        Result will appear here...
+                        The result will appear here...
                       </h3>
                     </div>
                   )}
