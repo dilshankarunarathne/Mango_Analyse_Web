@@ -93,7 +93,7 @@ function Home() {
                 <div className='text-xl font-bold items-center justify-center mt-16 p-4'>
                   {prediction && (
                     <div>
-                      <h3 className={prediction === 'not consumable' ? 'text-red-500' : ''}>
+                        <h3 className={prediction === 'not consumable' ? 'text-red-500' : 'text-green-500'}>
                         This mango is {prediction}
                       </h3>
                     </div>
