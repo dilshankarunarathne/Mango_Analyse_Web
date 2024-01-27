@@ -57,7 +57,7 @@ function Home() {
       <Header />
             <div className='flex h-screen ml-4 mr-4 mt-6'>
               <div className='image-select w-1/2'>
-                <div className="text-xl font-bold items-center justify-center p-4">
+                <div className='image-select w-1/2 border border-gray-400 bg-gray-200 p-4'>
                   <div>
                     <h3>Select the mango image to check if it's consumable...</h3>
                   </div>
