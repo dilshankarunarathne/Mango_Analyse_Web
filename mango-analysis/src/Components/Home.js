@@ -61,9 +61,12 @@ function Home() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}>
-            <div className='flex h-screen ml-4 mr-4 mt-6' style={{ alignItems: 'baseline' }}>
+            <div className='flex h-screen ml-4 mr-4 ' style={{ alignItems: 'baseline', height: "79vh" }}>
               <div className='image-select w-1/2'>
-                <div className='image-select w-1/2 border border-gray-400 bg-green-200 p-4 text-l font-bold'>
+                <div 
+                className='image-select w-1/2 border border-gray-400 bg-green-200 p-4 text-l font-bold'
+                style={{ width: "80%" }}
+                >
                   <div>
                     <h3>Select the mango image to check if it's consumable...</h3>
                   </div>
@@ -94,7 +97,7 @@ function Home() {
                 </div>
               </div>
 
-              <div className='result-box w-1/2 border border-gray-400 bg-green-200 p-4'>
+              <div className='result-box w-1/2 border border-gray-400 bg-green-200 p-4 mt-4'>
                 <div className='text-xl font-bold items-center justify-center p-4'>
                   {prediction ? (
                     <div>
