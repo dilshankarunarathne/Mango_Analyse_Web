@@ -90,10 +90,16 @@ function Home() {
 
               <div className='result-box w-1/2'>
                 <div className='text-xl font-bold items-center justify-center p-4'>
-                  {prediction && (
+                  {prediction ? (
                     <div>
-                        <h3 className={prediction === 'not consumable' ? 'text-red-500' : 'text-green-500'}>
+                      <h3 className={prediction === 'not consumable' ? 'text-red-500' : 'text-green-500'}>
                         This mango is {prediction}
+                      </h3>
+                    </div>
+                  ) : (
+                    <div>
+                      <h3>
+                        Result will appear here...
                       </h3>
                     </div>
                   )}
