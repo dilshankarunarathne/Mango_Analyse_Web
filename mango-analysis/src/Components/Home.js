@@ -51,6 +51,9 @@ function Home() {
             <div className='image-select'>
 
             </div>
+            <div className='image-select'>
+
+            </div>
             <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
               <div>
                 <h3>Select the mango image to check if it's consumable:</h3>
