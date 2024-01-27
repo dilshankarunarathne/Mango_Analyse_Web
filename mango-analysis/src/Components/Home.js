@@ -51,7 +51,7 @@ function Home() {
             <div className='image-select'>
 
             </div>
-            <div className='image-select'>
+            <div className='result-box'>
 
             </div>
             <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
