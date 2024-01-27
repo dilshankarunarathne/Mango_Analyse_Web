@@ -57,7 +57,7 @@ function Home() {
       <Header />
             <div className='flex h-screen ml-4 mr-4'>
               <div className='image-select w-1/2'>
-                <div className="text-xl font-bold items-center justify-center mt-16 p-4">
+                <div className="text-xl font-bold items-center justify-center p-4">
                   <div>
                     <h3>Select the mango image to check if it's consumable:</h3>
                   </div>
@@ -90,7 +90,7 @@ function Home() {
               </div>
 
               <div className='result-box w-1/2'>
-                <div className='text-xl font-bold items-center justify-center mt-16 p-4'>
+                <div className='text-xl font-bold items-center justify-center p-4'>
                   {prediction && (
                     <div>
                         <h3 className={prediction === 'not consumable' ? 'text-red-500' : 'text-green-500'}>
