@@ -74,9 +74,6 @@ function Home() {
                   />
                   <label htmlFor="imageUpload">Upload Image</label>
                 </div>
-                {previewSource && (
-                  <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
-                )}
                 <br></br>
                 <br></br>
                 <form>
@@ -90,7 +87,7 @@ function Home() {
                 </form>
               </div>
             </div>
-            
+
             <div className='result-box'>
 
             </div>
