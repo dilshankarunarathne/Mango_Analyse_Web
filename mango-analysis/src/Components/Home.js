@@ -60,7 +60,7 @@ function Home() {
           <div className="absolute inset-0 ... ">
             <div className='flex'>
               <div className='image-select flex-1'>
-                <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
+                <div className="text-xl font-bold items-center justify-center grid-rows-2 mt-16 p-4">
                   <div>
                     <h3>Select the mango image to check if it's consumable:</h3>
                   </div>
