@@ -5,9 +5,9 @@ import Footer from './footer';
 import ResultPage from './results';
 
 function Home() {
-  const navigate = useNavigate();
   const [fileSelected, setFileSelected] = useState(null);
   const [previewSource, setPreviewSource] = useState();
+  const [prediction, setPrediction] = useState(null); // New state variable for prediction
 
   const handleFileChange = (event) => {
     if (event.target.files.length > 0) {
@@ -37,7 +37,7 @@ function Home() {
   
     if (response.ok) {
       const data = await response.json();
-      navigate('/results', { state: { prediction: data.prediction } });
+      setPrediction(data.prediction); // Set prediction instead of navigating
     } else {
       alert('File upload failed');
     }
@@ -59,44 +59,45 @@ function Home() {
         <div className="relative min-h-full w-32 ...">
           <div className="absolute inset-0 ... ">
             <div className='image-select'>
-              <div className='left-box'>
+              <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
+                <div>
+                  <h3>Select the mango image to check if it's consumable:</h3>
+                </div>
+                <br></br>
+                <div className="mt-4">
+                  <input
+                    type="file"
+                    id="imageUpload"
+                    name="imageUpload"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                  />
+                  <label htmlFor="imageUpload">Upload Image</label>
+                </div>
                 {previewSource && (
                   <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
                 )}
-              </div>
-              <div className='right-box'>
-                <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
-                  <div>
-                    <h3>Select the mango image to check if it's consumable:</h3>
-                  </div>
-                  <br></br>
-                  <div className="mt-4">
-                    <input
-                      type="file"
-                      id="imageUpload"
-                      name="imageUpload"
-                      accept="image/*"
-                      onChange={handleFileChange}
-                    />
-                    <label htmlFor="imageUpload">Upload Image</label>
-                  </div>
-                  <br></br>
-                  <br></br>
-                  <form>
-                    <button
-                      type="button" 
-                      className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      onClick={handleSubmit}
-                    >
-                      Submit
-                    </button>
-                  </form>
-                </div>
+                <br></br>
+                <br></br>
+                <form>
+                  <button
+                    type="button" 
+                    className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={handleSubmit}
+                  >
+                    Submit
+                  </button>
+                </form>
               </div>
             </div>
 
             <div className='result-box'>
-
+              {prediction && (
+                <div>
+                  <h3>Result is :</h3>
+                  <div>{prediction}</div>
+                </div>
+              )}
             </div>
             
           </div>
