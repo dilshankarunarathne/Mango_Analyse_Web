@@ -54,33 +54,7 @@ function Home() {
             <div className='result-box'>
 
             </div>
-            <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
-              <div>
-                <h3>Select the mango image to check if it's consumable:</h3>
-              </div>
-              <br></br>
-              <div className="mt-4">
-                <input
-                  type="file"
-                  id="imageUpload"
-                  name="imageUpload"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                />
-                <label htmlFor="imageUpload">Upload Image</label>
-              </div>
-              <br></br>
-              <br></br>
-              <form>
-                <button
-                  type="button" // Change to type="button" to prevent form submission
-                  className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  onClick={handleSubmit}
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
+            
           </div>
         </div>
       </div>
