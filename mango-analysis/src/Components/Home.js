@@ -61,7 +61,6 @@ function Home() {
                   <div>
                     <h3>Select the mango image to check if it's consumable:</h3>
                   </div>
-                  <br></br>
                   <div className="mt-4">
                     <input
                       type="file"
@@ -72,10 +71,10 @@ function Home() {
                     />
                     {/* <label htmlFor="imageUpload">Upload Image</label> */}
                   </div>
+                  <br></br>
                   {previewSource && (
                     <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
                   )}
-                  <br></br>
                   <br></br>
                   <form>
                     <button
