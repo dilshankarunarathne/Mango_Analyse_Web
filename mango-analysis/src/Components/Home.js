@@ -58,48 +58,49 @@ function Home() {
       <div className="mt-16 p-4 flex justify-center items-center">
         <div className="relative min-h-full w-32 ...">
           <div className="absolute inset-0 ... ">
-            <div className='image-select flex-1'>
-              <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
-                <div>
-                  <h3>Select the mango image to check if it's consumable:</h3>
+            <div className='flex'>
+              <div className='image-select flex-1'>
+                <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
+                  <div>
+                    <h3>Select the mango image to check if it's consumable:</h3>
+                  </div>
+                  <br></br>
+                  <div className="mt-4">
+                    <input
+                      type="file"
+                      id="imageUpload"
+                      name="imageUpload"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                    />
+                    <label htmlFor="imageUpload">Upload Image</label>
+                  </div>
+                  {previewSource && (
+                    <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
+                  )}
+                  <br></br>
+                  <br></br>
+                  <form>
+                    <button
+                      type="button" 
+                      className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      onClick={handleSubmit}
+                    >
+                      Submit
+                    </button>
+                  </form>
                 </div>
-                <br></br>
-                <div className="mt-4">
-                  <input
-                    type="file"
-                    id="imageUpload"
-                    name="imageUpload"
-                    accept="image/*"
-                    onChange={handleFileChange}
-                  />
-                  <label htmlFor="imageUpload">Upload Image</label>
-                </div>
-                {previewSource && (
-                  <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
+              </div>
+
+              <div className='result-box flex-1'>
+                {prediction && (
+                  <div>
+                    <h3>Result is :</h3>
+                    <div>{prediction}</div>
+                  </div>
                 )}
-                <br></br>
-                <br></br>
-                <form>
-                  <button
-                    type="button" 
-                    className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={handleSubmit}
-                  >
-                    Submit
-                  </button>
-                </form>
               </div>
             </div>
-
-            <div className='result-box flex-1'>
-              {prediction && (
-                <div>
-                  <h3>Result is :</h3>
-                  <div>{prediction}</div>
-                </div>
-              )}
-            </div>
-            
           </div>
         </div>
       </div>
