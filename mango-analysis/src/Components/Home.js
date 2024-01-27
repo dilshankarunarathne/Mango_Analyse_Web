@@ -55,9 +55,6 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className="mt-16 p-4 flex justify-center items-center">
-        <div className="relative min-h-full w-32 ...">
-          <div className="absolute inset-0 ... ">
             <div className='flex'>
               <div className='image-select flex-1'>
                 <div className="text-xl font-bold items-center justify-center mt-16 p-4">
@@ -73,7 +70,7 @@ function Home() {
                       accept="image/*"
                       onChange={handleFileChange}
                     />
-                    <label htmlFor="imageUpload">Upload Image</label>
+                    {/* <label htmlFor="imageUpload">Upload Image</label> */}
                   </div>
                   {previewSource && (
                     <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
@@ -100,9 +97,6 @@ function Home() {
                   </div>
                 )}
               </div>
-            </div>
-          </div>
-        </div>
       </div>
       {/* <Footer /> */}
     </div>
