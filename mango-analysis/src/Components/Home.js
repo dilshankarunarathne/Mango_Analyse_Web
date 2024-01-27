@@ -7,7 +7,7 @@ import ResultPage from './results';
 function Home() {
   const [fileSelected, setFileSelected] = useState(null);
   const [previewSource, setPreviewSource] = useState();
-  const [prediction, setPrediction] = useState(null); // New state variable for prediction
+  const [prediction, setPrediction] = useState(null); 
 
   const handleFileChange = (event) => {
     if (event.target.files.length > 0) {
@@ -37,7 +37,7 @@ function Home() {
   
     if (response.ok) {
       const data = await response.json();
-      setPrediction(data.prediction); // Set prediction instead of navigating
+      setPrediction(data.prediction); 
     } else {
       alert('File upload failed');
     }
