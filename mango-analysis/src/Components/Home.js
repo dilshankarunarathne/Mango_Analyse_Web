@@ -59,7 +59,7 @@ function Home() {
               <div className='image-select w-1/2'>
                 <div className="text-xl font-bold items-center justify-center p-4">
                   <div>
-                    <h3>Select the mango image to check if it's consumable:</h3>
+                    <h3>Select the mango image to check if it's consumable...</h3>
                   </div>
                   <div className="mt-4">
                     <input
