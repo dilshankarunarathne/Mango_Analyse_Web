@@ -59,6 +59,11 @@ function Home() {
         <div className="relative min-h-full w-32 ...">
           <div className="absolute inset-0 ... ">
             <div className='image-select'>
+              <div className='left-box'>
+                {previewSource && (
+                  <img src={previewSource} alt="chosen" style={{ height: '300px' }} />
+                )}
+              </div>
               <div className="text-xl font-bold items-center justify-center grid grid-rows-2 mt-16 p-4">
                 <div>
                   <h3>Select the mango image to check if it's consumable:</h3>
